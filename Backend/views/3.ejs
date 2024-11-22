@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROP-ERA</title>
+    <link rel="stylesheet" href="css/3.css">
+    <script type="text/javascript">
+        // Initialize Google Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                autoDisplay: false,
+                includedLanguages: 'en,ja,hi,ta,te,bn,gu'
+            }, 'google_translate_element');
+        }
+
+        // Apply saved language on page load
+        function applySavedLanguage() {
+            const savedLang = localStorage.getItem('selectedLanguage');
+            if (savedLang) {
+                const iframe = document.querySelector('iframe.goog-te-banner-frame');
+                if (!iframe) {
+                    const googleFrame = document.querySelector('.goog-te-combo');
+                    if (googleFrame) {
+                        googleFrame.value = savedLang;
+                        googleFrame.dispatchEvent(new Event('change'));
+                    }
+                }
+            }
+        }
+
+        // Save language selection
+        function saveLanguage(lang) {
+            localStorage.setItem('selectedLanguage', lang);
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body onload="applySavedLanguage()">
+    <div id="weather-container">
+        <h1>CROP-ERA</h1>
+        <img src="assets/official-logo1.png" alt="weather-icon" class="logo" style="position: absolute; ">
+        <input type="text" id="city" placeholder="Enter city">
+        <button onclick="getweather()" id="getWeatherbutton">Search</button> 
+        <div id="temp-div"></div>
+        <div id="weather-info"></div>
+        <div id="hourly-forecast"></div>
+        <h3>Agricultural Recommendations:</h3>
+        <div id="agricultural-recommendations">
+          
+            <div id="water-level">
+               
+                <% if (agriculture && agriculture.waterLevel) { %>
+                    <p><%= agriculture.waterLevel %></p>
+                <% }%>
+            </div>
+            <div id="pesticides">
+               
+                <% if (agriculture && agriculture.pesticides) { %>
+                    <p><%= agriculture.pesticides %></p>
+                <% }%>
+            </div>
+            <div id="fertilizers">
+                
+                <% if (agriculture && agriculture.fertilizers) { %>
+                    <p><%= agriculture.fertilizers %></p>
+                <% }%>
+            </div>
+        </div>
+    </div>
+    <script src="/js/3.js"></script>
+</body>
+</html>

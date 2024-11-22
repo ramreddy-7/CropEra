@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Technologies</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap">
+    <link rel="stylesheet" href="css/4.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            autoDisplay: false,
+            includedLanguages: 'en,ja,hi,ta,te,bn,gu'
+          }, 'google_translate_element');
+        }
+      </script>
+      <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <!-- Header -->
+
+    <!-- Slider -->
+    <div class="slider">
+        <div class="list">
+            <% technologies.forEach((tech, index) => { %>
+                <div class="item <%= index === 0 ? 'active' : '' %>">
+                    <img src="<%= tech.image %>" alt="<%= tech.TechnologyName %>">
+                    <div class="content">
+                        
+                        <h2 class="h2"><%= tech.TechnologyName %></h2>
+                        <p ><%= tech.Overview %></p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+
+        <!-- Button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        <!-- Thumbnail -->
+        <div class="thumbnail">
+            <% technologies.forEach((tech, index) => { %>
+                <div class="item <%= index === 0 ? 'active' : '' %>">
+                    <img src="<%= tech.image %>" alt="<%= tech.TechnologyName %>">
+                    <div class="content">
+                        <%= tech.TechnologyName %>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <script src="/js/4.js"></script>
+</body>
+</html

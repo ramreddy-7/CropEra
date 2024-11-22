@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+a{
+    color: #20ab6a;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #20ab6a; /* Background color */
+    font-family: Arial, sans-serif;
+    background-image: url("https://www.pinclipart.com/picdir/big/184-1841747_green-banana-clipart.png");
+    background-size: cover;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.7); /* Login box background color */
+    padding: 80px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%; /* Responsive width */
+    backdrop-filter: blur(10px);
+   
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.textbox {
+    margin-bottom: 15px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #20ab6a; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #0fe883; /* Darker button color on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .login-box {
+        padding: 20px;
+        width: 90%; /* Make the login box wider on small screens */
+    }
+
+    .btn {
+        font-size: 14px; /* Adjust button font size */
+    }
+}
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 100px; 
+    z-index: 10;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+.logo{
+    cursor: pointer;
+}
+select {
+    width: 100%;
+    appearance: none; /* Removes the default browser styling */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent effect */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:hover {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.7);
+    outline: none;
+}
+
+option {
+    background-color: white;
+    color: #333;
+}
+.language-selector {
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    border-radius: 0%;
+
+    right: 10px;
+    z-index: 1000;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}

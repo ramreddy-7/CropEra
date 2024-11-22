@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="css/2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Translate Initialization -->
+  <script type="text/javascript">
+    // Initialize Google Translate widget
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false,
+        includedLanguages: 'en,ja,hi,ta,te,bn,gu'
+      }, 'google_translate_element');
+    }
+
+    // Persist selected language across pages
+    function saveLanguageSelection(lang) {
+      localStorage.setItem('selectedLanguage', lang);
+    }
+
+    // Apply saved language selection on page load
+    function applySavedLanguage() {
+      const savedLang = localStorage.getItem('selectedLanguage');
+      if (savedLang) {
+        const googleCombo = document.querySelector('.goog-te-combo');
+        if (googleCombo) {
+          googleCombo.value = savedLang;
+          googleCombo.dispatchEvent(new Event('change'));
+        }
+      }
+    }
+
+    // Call the function to apply saved language
+    document.addEventListener('DOMContentLoaded', applySavedLanguage);
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+  <!-- Background Video -->
+  <div class="video-container">
+    <video autoplay loop muted playsinline>
+      <source src="assets/CROP-ERA BACKGROUND-VIDEO.mp4">
+    </video>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo-container">
+      <img src="assets/official-logo1.png" alt="crop-era_logo">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </div>
+
+    <div class="nav-links">
+      <div class="nav-box">
+        <i class="fa-solid fa-cloud"></i>
+        <li><a href="/3" id="weather">Weather</a></li>
+      </div>
+      <div class="nav-box">
+        <i class="fa-solid fa-tractor"></i>
+        <li><a href="/4" id="newTechnologies">New Technologies</a></li>
+      </div>
+      <div class="nav-box">
+        <i class="fa-solid fa-disease"></i>
+        <li><a href="/5" id="diseases">Diseases</a></li>
+      </div>
+      <div class="nav-box">
+        <i class="fa-solid fa-circle-info"></i>
+        <li><a href="/6" id="about">About</a></li>
+      </div>
+    </div>
+
+    <!-- Google Translate Element -->
+    <div id="google_translate_element" style="margin-left: 20px;"></div>
+  </div>
+
+  <!-- Welcome Text -->
+  <div class="typing-effect">CROP-ERA</div>
+  <div id="title">Bridging Argiculture and Innovation</div>
+
+  <!-- JavaScript -->
+  <script src="js/2.js"></script>
+  <script>
+    // Toggle menu in mobile view
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

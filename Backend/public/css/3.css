@@ -1,0 +1,205 @@
+body {
+
+    background: #25ab69;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+    
+    height: 100vh;
+    
+    margin: 0;
+    
+    }
+    .logo{
+        width: 100px;
+        height: auto;
+        display: none;
+    }
+    #weather-container {
+    
+    background: rgba(255, 255, 255, 0.3);
+    
+    max-width: 400px;
+    
+    padding: 20px;
+    
+    border-radius: 15px;
+    
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    
+    backdrop-filter: blur (10px);
+    
+    border: 1px solid rgba(197, 42, 42, 0.1);
+    
+    text-align: center;
+}
+h2,label,p{
+    color: #fff;
+    margin: 8px 0;
+}
+input{
+    width: calc(100%-16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 20px;
+    
+}
+button{
+    background: #25ab689c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
+}
+button:hover{
+    background:#25ab69;
+}
+
+#temp-div p {
+    font-size: 60px;
+    margin-top: -30px;
+}
+#weather-info {
+    font-size: 20px;
+    color: black;
+}
+#weather-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none;;
+}
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content:space-between;
+    
+}
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+.hourly-item img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+#hourly-heading {
+    color: #fff;
+    margin-top: 10px;
+}
+#agricultural-recommendations{
+    display: flex;
+    gap: 0.4rem;
+}
+.moderateRain-background{
+    background-image: url('/images/moderate-rain.jpg');
+    background-size: cover;
+
+}
+.heavySnow-background{
+    background-image: url('/imagesheavysnow.jpg');
+    background-size: cover;
+}
+.lightSnow-background{
+    background-image: url('/images/moderate-rain.jpg');
+    background-size: cover;
+
+}
+.fewClouds-background{
+    background-image: url('/images/fewClouds.jpg');
+    background-size: cover;
+
+}
+.overcastClouds-background{
+    background-image: url('/images/overcast-clouds.jpg');
+    background-size: cover;
+
+}
+.clearSky-background{
+    background-image: url('/images/clearsky.jpg');
+    background-size: cover;
+
+}
+.thunderstormWithLightRain-background{
+    background-image: url('/images/thunderstromheavyrain.jpg');
+    background-size: cover;
+
+}
+.thunderstormWithHeavyRain-background{
+    background-image: url('/images/thunderstromheavyrain.jpg');
+    background-size: cover;
+
+}
+.lightIntensityDrizzle-background{
+    background-image: url('/images/lightintensitydrizzle.jpg');
+    background-size: cover;
+
+}
+.heavyIntensityDrizzle-background{
+    background-image: url('/images/moderate-rain.jpg');
+    background-size: cover;
+
+}
+.mist-background{
+    background-image: url('/images/mist.jpg');
+    background-size: cover;
+
+}
+.haze-background{
+    background-image: url('/images/haze.jpg');
+    background-size: cover;
+
+}
+.fog-background{
+    background-image: url('/images/fog.jpg');
+    background-size: cover;
+
+}
+.sand-background{
+    background-image: url('/images/sand.jpg');
+    background-size: cover;
+
+}
+.dust-background{
+    background-image: url('/images/moderate-rain.jpg');
+    background-size: cover;
+
+}
+.volcanicAsh-background{
+    background-image: url('/images/moderate-rain.jpg');
+    background-size: cover;
+
+}
+.squalls-background{
+    background-image: url('/images/moderate-rain.jpg');
+    background-size: cover;
+
+}
+.tornado-background{
+    background-image: url('/images/moderate-rain.jpg');
+    background-size: cover;
+
+}
+p{
+    color: black;
+}

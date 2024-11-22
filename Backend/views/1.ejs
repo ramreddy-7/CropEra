@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROPERA</title>
+    <link rel="icon" href="assets/logomini.png">
+    <link rel="stylesheet" href="css/1.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="logo-container">
+        <img src="assets/official-logo1.png" alt="Logo" class="logo">
+    </div>
+        <div class="container">
+            <div class="login-box ">
+                <h2 id="welcomeMessage">Welcome to CROP-ERA!</h2>
+                <h3 id="enterDetailsMessage">Please enter your details</h3>
+                <form name="userinput" method="post" action="/home">
+                    <div class="textbox"> 
+                        <label id="locationLabel" for="location">Location</label>
+                        <select name="location" id="location">
+                            <option value="Adilabad">Adilabad</option>
+                            <option value="Komaram Bheem (Asifabad)">Komaram Bheem (Asifabad)</option>
+                            <option value="Mancherial">Mancherial</option>
+                            <option value="Nirmal">Nirmal</option>
+                            <option value="Karimnagar">Karimnagar</option>
+                            <option value="Jagtial">Jagtial</option>
+                            <option value="Rajanna Sircilla">Rajanna Sircilla</option>
+                            <option value="Peddapalli">Peddapalli</option>
+                            <option value="Warangal Urban">Warangal Urban</option>
+                            <option value="Warangal-Rural">Warangal Rural (Hanamkonda)</option>
+                            <option value="Jangaon">Jangaon</option>
+                            <option value="Jayashankar-Bhupalpally">Jayashankar Bhupalpally</option>
+                            <option value="Mahabubabad">Mahabubabad</option>
+                            <option value="Mulugu">Mulugu</option>
+                            <option value="Nizamabad">Nizamabad</option>
+                            <option value="Kamareddy">Kamareddy</option>
+                            <option value="Medak">Medak</option>
+                            <option value="Sangareddy">Sangareddy</option>
+                            <option value="Siddipet">Siddipet</option>
+                            <option value="Mahabubnagar">Mahabubnagar</option>
+                            <option value="Nagarkurnool">Nagarkurnool</option>
+                            <option value="Wanaparthy">Wanaparthy</option>
+                            <option value="Jogulamba-Gadwal">Jogulamba Gadwal</option>
+                            <option value="Narayanpet">Narayanpet</option>
+                            <option value="Khammam">Khammam</option>
+                            <option value="Bhadradri-Kothagudem">Bhadradri Kothagudem</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Rangareddy">Rangareddy</option>
+                            <option value="Medchal-Malkajgiri">Medchal–Malkajgiri</option>
+                            <option value="Nalgonda">Nalgonda</option>
+                            <option value="Yadadri-Bhuvanagiri">Yadadri Bhuvanagiri</option>
+                            <option value="Suryapet">Suryapet</option>
+                            <option value="Vikarabad">Vikarabad</option>
+                        </select>                        
+                    </div>
+                    <div class="textbox">
+                        <label id="cropLabel" for="crop">Crop</label> 
+                       <select name="crop" id="crop">
+                        <option value="rice">Rice</option>
+                        <option value="Wheat">Wheat</option>
+                       </select>
+                    </div>
+                    <div class="textbox">
+
+                        <select class="language-selector" onchange="updateLanguage(this.value)">
+                            <option value="english">English</option>
+                            <option value="telugu">Telugu</option>
+                            <option value="hindi">Hindi</option>
+                        </select>
+                        <!-- <label id="languageLabel" for="language">Language</label>
+                        <select name="language" id="language" onchange="updateLanguage()">
+                         <option value="English">English</option>
+                         <option value="Telugu">Telugu</option>
+                         <option value="Hindi">Hindi</option>
+                        </select> -->
+                     </div>
+                     <button type="submit">Save</button>
+                </form>
+        </div>
+    </div>
+    <script>
+        function redirectToHome() {
+          const selectedLanguage = document.getElementById("languageSelector").value;
+          window.location.href = `/2?lang=${selectedLanguage}`; // Pass language as query parameter
+        }
+      </script>
+    <script src="js/1.js"></script>
+</body>
+</html>

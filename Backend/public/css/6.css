@@ -1,0 +1,106 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #48c78e, #4ca1af);
+    color: white;
+}
+
+.title {
+    font-size: 2.5rem;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* About Section */
+.about-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.about-content {
+    padding: 1rem;
+}
+
+.about-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #48c78e;
+    position: relative;
+}
+
+.about-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #48c78e;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.focus-list {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.focus-list li {
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.focus-list li::before {
+    content: '✔';
+    color: #48c78e;
+    margin-right: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
