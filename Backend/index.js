@@ -174,11 +174,9 @@ function getAgriculturalRecommendations(description) {
               waterLevel: "No major changes required. Maintain 2-4 cm.",
               pesticides: "Consider fungicides to protect against mold and mildew.",
               fertilizers: "Regular application as needed; nitrogen, potassium, and phosphorus are safe to use in regular doses."
-   
-            }
+   }
           
-          
-    }
+ }
 
     const weatherKey = description.toLowerCase();
     // If no match is found, return a default recommendation
