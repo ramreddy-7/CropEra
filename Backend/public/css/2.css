@@ -108,7 +108,7 @@ body {
 }
 
 /* Mobile Devices (Max width: 600px) */
-@media (max-width: 600px) {
+@media (max-width: 780px) {
   .logo-container img {
     width: 120px;
   }
